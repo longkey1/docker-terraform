@@ -1,10 +1,7 @@
 FROM hashicorp/terraform:latest
 
-# Fix frontend not set error
-ARG DEBIAN_FRONTEND=noninteractive
-
 # Install gosu
-RUN apt-get -y update && apt-get -y install gosu
+RUN apk --update add gosu
 
 # Make working directory
 ENV WORK_DIR=/work
