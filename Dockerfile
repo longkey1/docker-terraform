@@ -1,7 +1,8 @@
 FROM hashicorp/terraform:latest
 
 # Install gosu
-RUN apk --update add gosu
+RUN apk --no-cache add su-exec
+RUN which su-exec
 
 # Make working directory
 ENV WORK_DIR=/work
