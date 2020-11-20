@@ -1,8 +1,10 @@
 FROM hashicorp/terraform:latest
 
+# Install shadow
+RUN apk --no-cache add shadow
+
 # Install gosu
 RUN apk --no-cache add su-exec
-RUN which su-exec
 
 # Make working directory
 ENV WORK_DIR=/work
