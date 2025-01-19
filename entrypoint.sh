@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 USER_ID=${LOCAL_UID:-9001}
 GROUP_ID=${LOCAL_GID:-9001}
@@ -20,4 +20,4 @@ export HOME=/work
 
 chown worker:worker ${WORK_DIR}
 
-exec /usr/sbin/gosu worker "$@"
+exec /bin/su - worker -c "$@"
