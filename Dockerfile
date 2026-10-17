@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:latest
+FROM hashicorp/terraform:light
 
 # Install shadow
 RUN apk --no-cache add shadow
